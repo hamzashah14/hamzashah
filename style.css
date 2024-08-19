@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    background: #080808;
+    background: black;
     color: #FDFFE2;
 }
 #header{
@@ -106,6 +106,35 @@ body{
         transform: translateY(-100px) rotate(45deg) scale(0);
     }
 }
+
+
+/* Back to Top Button */
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: black;
+    font-size: 25px;
+}
+
+/* nav Bar */
 
 nav{
     display: flex;
@@ -214,6 +243,9 @@ nav ul li a:hover{
 
    .wrapper{
     margin-top: 40px;
+    animation: appear2 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
    }
 
    .wrapper .social-button{
@@ -317,6 +349,9 @@ nav ul li a:hover{
 
 .about-col-1{
     flex-basis: 35%;
+    animation: appear1 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .about-col-1 img{
@@ -326,6 +361,9 @@ nav ul li a:hover{
 
 .about-col-2{
     flex-basis: 60%;
+    animation: appear1 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .about-col-2 h1{
@@ -391,6 +429,7 @@ nav ul li a:hover{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    position: relative;
 }
 
 .sub-title{
@@ -404,6 +443,9 @@ nav ul li a:hover{
     font-size: 13px;
     font-weight: 300;
     transition: background 0.5s, transform 0.5s;
+    animation: appear2 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .services-list div i{
@@ -443,6 +485,9 @@ nav ul li a:hover{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    animation: appear1 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .work{
@@ -513,6 +558,7 @@ nav ul li a:hover{
     text-decoration: none;
     color: #fff;
     transition: background 0.5s;
+    position: relative;
 }
 
 .btn:hover{
@@ -531,18 +577,27 @@ nav ul li a:hover{
 
 .contact-left p{
     margin-top: 30px;
+    animation: appear2 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .contact-left p i{
     font-size: 20px;
     margin-right: 15px;
     color: #83b4ff;
+    animation: appear2 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .btn.btn2{
     background: transparent;
     transition: background 0.5s;
     display: inline-block;
+    animation: appear1 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .btn.btn2:hover{
@@ -565,6 +620,10 @@ form input, form textarea{
     font-size: 15px;
     border-radius: 6px;
     text-indent: 5px;
+    position: relative;
+    animation: appear1 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 ::placeholder{
@@ -677,3 +736,110 @@ nav .fa-solid{
         font-size: 12px;
     }
 }
+
+/* Particles CSS */
+
+canvas {
+    position: fixed;
+    vertical-align: bottom;
+    display: block;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+    opacity: 0.8;
+  }
+  /* ---- stats.js ---- */
+
+  .count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  .js-count-particles {
+    font-size: 1.1em;
+  }
+  #stats,
+  .count-particles {
+    -webkit-user-select: none;
+  }
+  #stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
+  .count-particles {
+    border-radius: 0 0 3px 3px;
+  }
+
+
+
+  /* Cursor Trail effect */
+
+  .cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .cursor-trail .trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out;
+  }
+  
+  .cursor-trail .trail:hover {
+    transform: scale(1.5);
+  }
+
+
+
+
+  /* Element Animation */
+
+  @keyframes appear1 {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+  }
+
+  @keyframes appear2 {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }

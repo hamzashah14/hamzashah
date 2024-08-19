@@ -10,7 +10,7 @@
     <title>Hamza Shah</title>
     <script src="https://kit.fontawesome.com/2dab088eca.js" crossorigin="anonymous"></script>
 </head>
-<body onload="loadFunction()">
+<body>
     <!-- Preloader starts -->
 	<div class="preloader" id="preloader">
 		<div class="loader">
@@ -20,6 +20,13 @@
 		</div>
 	</div>
 	<!-- Preloader Ends -->
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+
+    <div id="particles-js"></div>
+    <div class="cursor-trail"></div>
+    
     <header>
         <div id="header">
             <div class="container">
@@ -212,8 +219,15 @@
                 <p>Copyright © Hamza. Made  with by Hamza Shah <i class="fa-solid fa-heart"></i> 2024</p>
             </div>
      </footer>
+<!-- Include particles.js library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0"></script>
+<!-- Include stats.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r17/Stats.min.js"></script>
 
-<script src="script.js"></script>
+<script src="JavaScript/script.js"></script>
+<script src="JavaScript/cursor.js"></script>
+<script src="JavaScript/form.js"></script>
+<script src="JavaScript/particles.js"></script>
 
 </body>
 </html>
